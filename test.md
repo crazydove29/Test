@@ -14,3 +14,10 @@ There are many ways to contribute to the documentation. Review the following sec
 ### Reporting bugs and suggesting enhancements
 
 Please use the Feedback tool at the bottom of any article to submit bugs and suggestions.
+
+Getting started
+curl --request POST \
+--url https://api.sendgrid.com/v3/mail/send \
+--header 'Authorization: Bearer <<YOUR_API_KEY>>' \
+--header 'Content-Type: application/json' \
+--data '{"personalizations":[{"to":[{"email":"john.doe@example.com","name":"John Doe"}],"subject":"Hello, World!"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"sam.smith@example.com","name":"Sam Smith"},"reply_to":{"email":"sam.smith@example.com","name":"Sam Smith"}}'
